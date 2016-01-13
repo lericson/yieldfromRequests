@@ -3,8 +3,6 @@
 import os
 import sys
 
-import requests
-
 from codecs import open
 
 try:
@@ -30,8 +28,8 @@ with open('HISTORY.rst', 'r', 'utf-8') as f:
 
 setup(
     name='yieldfrom.requests',
-    version=requests.__version__,
-    description='asyncio Python HTTP for Humans.',
+    version='0.1.2',
+    description='asyncio port of Requests: "Python HTTP for Humans".',
     long_description=readme + '\n\n' + history,
 
     author='Kenneth Reitz',
@@ -42,7 +40,9 @@ setup(
     url='https://github.com/rdbhost/yieldfromrequests',
 
     packages=packages,
-    package_data={'': ['LICENSE', 'NOTICE'], 'yieldfrom.requests': ['*.pem']},
+    package_data={'': ['LICENSE', 'NOTICE'],
+                  'yieldfrom.requests': ['*.pem', 'requests/*.pem'],
+                  'yieldfrom': ['requests/*.pem', '*.pem']},
     package_dir={'yieldfrom': 'yieldfrom'},
     include_package_data=True,
     namespace_packages=['yieldfrom'],
