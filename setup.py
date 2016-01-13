@@ -39,7 +39,7 @@ setup(
     maintainer='David Keeney',
     maintainer_email='dkeeney@rdbhost.com',
 
-    url='http://github.com/rdbhost/yieldfromrequests',
+    url='https://github.com/rdbhost/yieldfromrequests',
 
     packages=packages,
     package_data={'': ['LICENSE', 'NOTICE'], 'yieldfrom.requests': ['*.pem']},
