@@ -19,7 +19,7 @@ packages = [
     'yieldfrom.requests',
 ]
 
-requires = ['chardet>=2.2.1', 'yieldfrom.http.client', 'yieldfrom.urllib3', 'setuptools']
+requires = ['chardet>=2.2.1', 'yieldfrom.http.client<0.2', 'yieldfrom.urllib3<0.2', 'setuptools']
 
 with open('README.rst', 'r', 'utf-8') as f:
     readme = f.read()
@@ -28,7 +28,7 @@ with open('HISTORY.rst', 'r', 'utf-8') as f:
 
 setup(
     name='yieldfrom.requests',
-    version='0.1.2',
+    version='0.1.3',
     description='asyncio port of Requests: "Python HTTP for Humans".',
     long_description=readme + '\n\n' + history,
 
@@ -51,11 +51,11 @@ setup(
     license='Apache 2.0',
     zip_safe=False,
     classifiers=(
-        'Intended Audience :: Developers',
-        'Natural Language :: English',
-        'License :: OSI Approved :: Apache Software License',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
+        b'Intended Audience :: Developers',
+        b'Natural Language :: English',
+        b'License :: OSI Approved :: Apache Software License',
+        b'Programming Language :: Python',
+        b'Programming Language :: Python :: 3.3',
+        b'Programming Language :: Python :: 3.4',
     ),
 )
