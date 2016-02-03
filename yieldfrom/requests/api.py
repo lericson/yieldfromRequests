@@ -11,9 +11,11 @@ This module implements the Requests API.
 
 """
 
+import asyncio
 from . import sessions
 
 
+@asyncio.coroutine
 def request(method, url, **kwargs):
     """Constructs and sends a :class:`Request <Request>`.
     Returns :class:`Response <Response>` object.
@@ -50,6 +52,7 @@ def request(method, url, **kwargs):
     return r
 
 
+@asyncio.coroutine
 def get(url, **kwargs):
     """Sends a GET request. Returns :class:`Response` object.
 
